@@ -121,3 +121,21 @@ SELECT ord_no, purch_amt,
 FROM orders
 -- Filters the rows to only include those where the percentage of the achieved amount is greater than 50%.
 WHERE (100 * purch_amnt) / 6000 > 50;
+
+-- Q.11 write a SQL query to find the details of all employees whose last name is ‘Dosni’ or ‘Mardy’. Return emp_idno, emp_fname, emp_lname, and emp_dept. TABLE: employees_d
+SELECT 
+    *
+FROM
+    employees_d
+WHERE
+    emp_lname = 'Dosni'
+        OR emp_lname = 'Mardy';
+
+-- Q.12 write a SQL query to find the employees who work at depart 47 or 63. Return emp_idno, emp_fname, emp_lname, and emp_dept.  
+-- Sample table : employees_d
+SELECT 
+    *
+FROM
+    employees_d
+WHERE
+    emp_dept = 47 OR emp_dept = 63;
